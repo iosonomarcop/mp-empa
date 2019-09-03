@@ -25,6 +25,10 @@
           {{getTrackingLabel().label}}
         </span>
       </div>
+      <div *ngIf="order.tracking" class="e-order-tracking-status">
+        <span class="e-label e-label--inline">{{order.tracking.carrier}}</span>
+        <span class="e-label e-label--inline">{{order.tracking.trackingCode}}</span>
+      </div>
       <p *ngIf="isPaymentPending()" class="e-order-details-message">
         Payment process not completed
       </p>
