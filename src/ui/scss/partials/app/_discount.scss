@@ -1,0 +1,28 @@
+.e-discount {
+  width: 100%;
+  color: $e-color-dark-gray;
+  border-bottom-color: $e-color-border-default;
+  border-bottom-style: solid;
+  border-bottom-width: $border-width-thin;
+  padding-top: $spacing-unit-m;
+  padding-bottom: $spacing-unit-m;
+}
+
+.e-discount:before,
+.e-discount:after {
+  content: " ";
+  display: block;
+}
+
+.e-discount:after {
+  clear: both;
+}
+
+.e-discount__name {
+  float: right;
+  padding-right: $spacing-unit-s;
+}
+
+.e-discount__value {
+  float: right;
+}

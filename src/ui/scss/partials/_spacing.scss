@@ -1,0 +1,21 @@
+$spacing-sizes: (
+        $xs: $spacing-unit-xs,
+        $s: $spacing-unit-s,
+        $m: $spacing-unit-m,
+        $l: $spacing-unit-l,
+);
+
+$directions: (top, right, bottom, left);
+
+@each $size-name in map-keys($spacing-sizes) {
+  $size: map-get($spacing-sizes, $size-name);
+  .e-spacing-#{$size-name} {
+    padding: $size;
+  }
+
+  @each $direction in $directions {
+    .e-spacing-#{$direction}-#{$size-name} {
+      padding-#{$direction}: $size;
+    }
+  }
+}

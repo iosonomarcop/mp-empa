@@ -1,0 +1,70 @@
+$user-avatar-color: #6ebc20;
+
+.e-avatar {
+  cursor: pointer;
+}
+
+.e-avatar[data-letters]:after {
+  content: attr(data-letters);
+  display: inline-block;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  width: $spacing-unit-l;
+  height: $spacing-unit-l;
+  text-align: center;
+  border-radius: 20%;
+  background: $user-avatar-color;
+  vertical-align: middle;
+  margin-left: $spacing-unit-s;
+  color: $e-color-white;
+}
+
+.e-avatar__name {
+  @include line-size($note-font-size);
+  @include font-weight-medium();
+  color: $e-color-black;
+}
+
+.e-avatar__menu {
+  display: none;
+  background-color: $e-color-background-alternative;
+  position: absolute;
+  right: $spacing-unit-s;
+  top: 3.4rem;
+  z-index: $z-modal;
+  box-shadow: $box-shadow-natural;
+
+  width: 9rem;
+  min-height: 0;
+  overflow: auto;
+
+  border-width: $border-width-thin;
+  border-color: $e-color-border-alternative;
+}
+
+.is-open {
+  display: table;
+}
+
+.e-menu-text {
+  padding-left: $spacing-unit-m;
+  padding-right: $spacing-unit-m;
+  padding-top: $spacing-unit-m;
+  padding-bottom: $spacing-unit-m;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.e-menu-image {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+
+  > img {
+    width: 2rem;
+  }
+}
+
+
+

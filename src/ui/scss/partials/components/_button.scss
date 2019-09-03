@@ -1,0 +1,102 @@
+$_touch-target-min-size: 34px;
+$_button-border-radius: .2rem;
+$_button-border-width: 2px;
+
+@mixin button-base() {
+  display: inline-block;
+  min-width: $_touch-target-min-size;
+  max-width: 100%;
+  min-height: $spacing-unit-l;
+
+  vertical-align: middle;
+  text-align: center;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  margin: 0;
+  padding-top: $spacing-unit-xs;
+  padding-bottom: $spacing-unit-xs;
+  padding-left: $spacing-unit-l;
+  padding-right: $spacing-unit-l;
+
+  border-radius: $_button-border-radius;
+  border-style: solid;
+  border-width: $_button-border-width;
+
+  background-color: $e-color-transparent;
+
+  @include line-size($text-font-size);
+
+  @include user-select();
+  @include truncate();
+}
+
+.e-button {
+  transition-property: background-color;
+  transition-duration: map-get($speed-variants, $fastest);
+  transition-timing-function: ease;
+
+  @include button-base();
+
+  &:focus {
+    border-color: $e-color-primary-light;
+    box-shadow: 0px 0px 0px 1px $e-color-primary-light;
+  }
+}
+
+.e-button:disabled {
+  color: $e-color-dark-gray;
+  background-color: $e-color-text-disabled;
+  border-color: $e-color-border-default;
+  cursor: not-allowed;
+}
+
+.e-button--primary {
+  border-color: $e-color-primary;
+  color: $e-color-white;
+  background-color: $e-color-primary;
+
+  &:not(:disabled) {
+    &:hover {
+      color: $e-color-primary;
+      background-color: $e-color-transparent;
+    }
+  }
+}
+
+.e-button--white {
+  border-color: $e-color-white;
+  color: $e-color-white;
+
+  &:not(:disabled) {
+    &:hover {
+      color: $e-color-dark-gray;
+      background-color: $e-color-white;
+    }
+  }
+}
+
+.e-button--default {
+  color: $e-color-white;
+  border-color: $e-color-button-default;
+  background-color: $e-color-button-default;
+
+  &:not(:disabled) {
+    &:hover {
+      color: $e-color-black;
+      background-color: $e-color-button-default-over;
+      border-color: $e-color-button-default;
+    }
+  }
+}
+
+.e-button--compact {
+  padding-left: $spacing-unit-s;
+  padding-right: $spacing-unit-s;
+}
+
+.e-button:disabled {
+  opacity: $opacity-m;
+  cursor: not-allowed;
+}

@@ -1,0 +1,20 @@
+.e-header {
+  padding: $spacing-unit-s;
+  border-bottom-style: solid;
+  border-bottom-color: $e-color-border-default;
+  border-bottom-width: $border-width-thin;
+  width: 100%;
+  display: table;
+}
+
+.e-header__logo {
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.e-header__avatar {
+  display: table-cell;
+  text-align: right;
+  vertical-align: middle;
+}

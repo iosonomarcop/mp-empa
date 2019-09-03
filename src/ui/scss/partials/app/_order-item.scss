@@ -1,0 +1,23 @@
+.e-order-item {
+  width: 100%;
+  border-bottom-color: $e-color-border-default;
+  border-bottom-style: solid;
+  border-bottom-width: $border-width-thin;
+  padding-top: $spacing-unit-m;
+  padding-bottom: $spacing-unit-m;
+  display: table;
+}
+
+.e-order-item__name {
+  display:table-cell;
+  margin-right: $spacing-unit-m;
+}
+
+.e-order-item__price {
+  display:table-cell;
+  text-align: right;
+}
+
+.e-order-item__action {
+  float: right;
+}

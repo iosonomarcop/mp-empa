@@ -1,0 +1,5 @@
+@mixin ease-transition($speed, $properties...) {
+  transition-property: $properties;
+  transition-duration: map-get($speed-variants, $speed);
+  transition-timing-function: ease;
+}

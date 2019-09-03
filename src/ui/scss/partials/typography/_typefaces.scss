@@ -1,0 +1,37 @@
+$default-regular-url: "/ui/assets/fonts/ApexNew-Book.otf";
+$default-italic-url: "/ui/assets/fonts/ApexNew-BookItalic.otf";
+$default-medium-url: "/ui/assets/fonts/ApexNew-Medium.otf";
+$default-bold-url: "/ui/assets/fonts/ApexNew-V2-Bold.otf";
+$lato-regular-url: "/ui/assets/fonts/Lato-Regular.ttf";
+
+@font-face {
+  font-family: "apexnew-book";
+  src: url($default-regular-url) format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "apexnew-medium";
+  src: url($default-medium-url) format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "apexnew-italic";
+  src: url($default-medium-url) format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "apexnew-bold";
+  src: url($default-bold-url) format("opentype");
+  font-style: normal;
+  font-weigth: bold;
+}
+
+@font-face {
+  font-family: "lato-regular";
+  src: url($default-regular-url) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

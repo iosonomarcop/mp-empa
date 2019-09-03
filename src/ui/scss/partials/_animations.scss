@@ -1,0 +1,15 @@
+$speed-variants: (
+        $slowest: 2.5s,
+        $slower: 1.5s,
+        $slow: 1s,
+        $fast: 500ms,
+        $faster: 300ms,
+        $fastest: 150ms
+);
+
+$speed-slowest: map_get($speed-variants, $slowest);
+$speed-slower: map_get($speed-variants, $slower);
+$speed-slow: map_get($speed-variants, $slow);
+$speed-fast: map_get($speed-variants, $fast);
+$speed-faster: map_get($speed-variants, $faster);
+$speed-fastest: map_get($speed-variants, $fastest);

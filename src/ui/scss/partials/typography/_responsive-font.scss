@@ -1,0 +1,22 @@
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin responsive-font-size($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $minVw: unit($min-vw);
+  $maxVw: unit($max-vw);
+  $minSize: unit($min-font-size);
+  $maxSize: unit($max-font-size);
+
+  @if $minVw == $maxVw and $minVw == $minSize and $minVw == $maxSize {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+<app-delete-order-modal [isOpen]="showModal" [orderId]="order.id" (orderDeleted)="closedModal($event)">
+</app-delete-order-modal>
+<div class="e-order-details">
+  <ng-template [ngIf]="order">
+    <div class="e-order-details-banner">
+      <h2 class="e-order-details-banner__title">
+        {{order.ref}}
+      </h2>
+      <div *ngIf="canCancelOrder()" class="e-order-details-banner__action">
+        <a class="e-link" (click)="cancelOrder()">Cancel order</a>
+      </div>
+    </div>
+    <ng-container *ngIf="order.status === orderStatusEnum.CANCELLED">
+      <div class="e-order-details-status">
+        <span class="e-label e-label--inline  e-label--bigger">Status: </span>
+        <span class="e-label e-label--{{getOrderStatusLabel().className}}  e-label--inline  e-label--bigger">
+        {{getOrderStatusLabel().label}}
+      </span>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="order.status !== orderStatusEnum.CANCELLED">
+      <div class="e-order-details-status">
+        <span class="e-label e-label--inline  e-label--bigger">Delivery: </span>
+        <span class="e-label e-label--inline  e-label--bigger  e-label--{{getTrackingLabel().className}}">
+          {{getTrackingLabel().label}}
+        </span>
+      </div>
+      <p *ngIf="isPaymentPending()" class="e-order-details-message">
+        Payment process not completed
+      </p>
+    </ng-container>
+    <div class="e-order-details-content">
+      <ul class="e-order-items">
+        <li *ngFor="let item of order.items" class="e-order-item">
+          <div class="e-order-item__name">{{item.name}}</div>
+          <div class="e-order-item__price">{{item.amount}}€</div>
+        </li>
+      </ul>
+      <ul class="e-order-discounts">
+        <li *ngFor="let discount of orderDiscounts" class="e-discount">
+          <div class="e-discount__value">(-{{discount.amount}}€)</div>
+          <div class="e-discount__name">{{discount.name}}</div>
+        </li>
+      </ul>
+    </div>
+    <div class="e-order-total e-label  e-label--number">
+      {{total}} - {{totalDiscount}} = {{total - totalDiscount}}€
+    </div>
+    <div class="e-order-actions">
+      <button class="e-button  e-button--primary" (click)="backToListOfOrders()">Ok</button>
+    </div>
+  </ng-template>
+</div>

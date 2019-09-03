@@ -1,0 +1,44 @@
+$content-size-s: 60%;
+$content-size-m: 80%;
+$content-size-l: 90%;
+
+@function content-spacing($size) {
+  @return calc(calc(100% - #{$size}) / 2);
+}
+
+.e-adaptive-container {
+  $spacing: content-spacing($content-size-s);
+  width: 60%;
+  max-width: 40rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  display: table;
+  height: 100%;
+}
+
+.e-adaptive-container--banner {
+  padding-bottom: $spacing-unit-m;
+}
+
+.e-adaptive-container--content {
+  padding-top: $spacing-unit-l;
+  padding-bottom: $spacing-unit-l;
+}
+
+@media (min-width: $screen-size-small) and (max-width: $screen-size-medium) {
+  .e-adaptive-container {
+    $spacing: content-spacing($content-size-m);
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: $screen-size-small) {
+  .e-adaptive-container {
+    $spacing: content-spacing($content-size-l);
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}

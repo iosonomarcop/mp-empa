@@ -1,0 +1,17 @@
+<div class="e-orders-content">
+  <ng-container *ngIf="(orders | async)?.length>0">
+    <h2 class="e-orders-content__title">
+      Your orders
+    </h2>
+    <ul class="e-orders-content__list">
+      <li *ngFor="let order of orders | async" class="e-orders-content__list-item">
+        <app-order [order]="order"></app-order>
+      </li>
+    </ul>
+  </ng-container>
+  <ng-container *ngIf="(orders | async)?.length===0">
+    <h2 class="e-orders-content__title">
+      Your have no registered orders
+    </h2>
+  </ng-container>
+</div>

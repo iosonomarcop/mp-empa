@@ -1,0 +1,7 @@
+/*------------------------------------*\
+    $USER-SELECT
+\*------------------------------------*/
+@mixin user-select($value:none) {
+  -ms-user-select: $value;
+  user-select: $value;
+}

@@ -1,0 +1,8 @@
+@mixin box() {
+  border-style: solid;
+  border-width: $border-width-thin;
+  border-color: $e-color-light-gray;
+
+  background-color: $e-color-white;
+  box-shadow: $box-shadow-natural;
+}

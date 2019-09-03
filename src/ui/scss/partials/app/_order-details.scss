@@ -1,0 +1,86 @@
+$details-title-size: 1.5em;
+
+@mixin resetFloat($element) {
+  .$element:before,
+  .$element:after {
+    content: " ";
+    display: block;
+  }
+
+  .$element:after {
+    clear: both;
+  }
+}
+
+.e-order-details {
+  width: 100%;
+  height: 100%;
+  padding-top: $spacing-unit-l;
+  padding-left: $spacing-unit-l;
+  padding-right: $spacing-unit-l;
+  max-width: 55rem;
+  margin: 0 auto;
+}
+
+.e-order-details-banner {
+  display: table;
+  width: 100%;
+}
+
+.e-order-details-status {
+  margin-top: $spacing-unit-l;
+}
+
+.e-order-details-message {
+  margin-top: $spacing-unit-m;
+  margin-bottom: $spacing-unit-m;
+  color: $e-color-text-indicator-warning;
+}
+
+.e-order-details-banner__title {
+  display: table-cell;
+  vertical-align: middle;
+  @include line-size($details-title-size);
+  color: $e-color-dark-gray;
+}
+
+.e-order-details-banner__action {
+  display: table-cell;
+  text-align: end;
+  vertical-align: middle;
+}
+
+.e-order-details-content {
+  width: 100%;
+}
+
+.e-order-items {
+  margin-top: $spacing-unit-l;
+  list-style: none;
+}
+
+.e-order-discounts {
+  list-style: none;
+}
+
+.e-order-total {
+  margin-top: $spacing-unit-m;
+  text-align: right;
+  color: $e-color-black;
+  @include line-size($number-font-size);
+}
+
+.e-order-actions {
+  margin-top: $spacing-unit-l;
+  text-align: right;
+}
+
+@media only screen and (max-width: $screen-size-small) {
+  .e-order-details-banner__title {
+    display: block;
+  }
+  .e-order-details-banner__action {
+    display: block;
+    text-align: start;
+  }
+}

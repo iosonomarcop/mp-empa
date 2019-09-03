@@ -1,0 +1,31 @@
+<div class="e-login__background">
+  <div class="e-login">
+    <div id="login-card" class="e-login__card">
+      <div class="e-login__header">
+        <img alt="Empatica logo" src="/ui/assets/images/empatica_logo_red.svg"/>
+      </div>
+      <form id="login-form" class="e-login__body">
+        <div class="e-spacing-bottom-s">
+          <label class="e-label  e-spacing-bottom-xs">Username</label>
+          <input class="e-input-text" type="text" name="username" [(ngModel)]="username"
+                 placeholder="Enter username" (blur)="inputChanged()"/>
+        </div>
+        <div class="e-spacing-bottom-m">
+          <label class="e-label  e-spacing-bottom-xs">Password</label>
+          <input class="e-input-text" type="password" name="password" [(ngModel)]="password"
+                 placeholder="Enter password" (blur)="inputChanged()"/>
+        </div>
+        <button class="e-button  e-button--primary  e-login-button"
+                id="submit" type="submit" tabindex="0"
+                (click)="login()"
+                [disabled]="invalidCredentials | async">
+          <span *ngIf="verifyingCredentials | async" class="e-spinner e-spinner--inline"></span>
+          Login
+        </button>
+      </form>
+      <div class="e-login__footer">
+      </div>
+    </div>
+  </div>
+
+</div>

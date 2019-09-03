@@ -1,0 +1,10 @@
+.e-paragraph {
+  font-size: $paragraph-font-size;
+  line-height: $line-height-ratio;
+  color: $e-color-black;
+  display: block;
+}
+
+.e-paragraph--on-dark-background {
+  color: $e-color-white;
+}

@@ -1,0 +1,71 @@
+.e-label {
+  @include line-size($text-font-size);
+  color: $e-color-dark-gray;
+  display: block;
+}
+
+.e-label--field {
+  color: $e-color-black;
+}
+
+.e-label--field-title {
+  color: $e-color-dark-gray;
+  text-transform: uppercase;
+  margin-bottom: $spacing-unit-s;
+}
+
+.e-label--ok {
+  color: $e-color-text-indicator-ok;
+}
+
+.e-label--warning {
+  color: $e-color-text-indicator-warning;
+}
+
+.e-label--info {
+  color: $e-color-text-indicator-info;
+}
+
+.e-label--undefined {
+  color: $e-color-text-indicator-undefined;
+}
+
+.e-label--error {
+  color: $e-color-text-indicator-error;
+}
+
+.e-label--number {
+  @include line-size($number-font-size);
+}
+
+.e-label--bigger {
+  @include line-size($text-font-size-bigger);
+}
+
+.e-label--inline {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: $spacing-unit-xs;
+  }
+}
+
+.e-label--reduced {
+  @include line-size($note-font-size);
+  color: $e-color-dark-gray;
+}
+
+.e-label--strike {
+  color: $e-color-dark-gray;
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: '';
+    border-bottom: 1px solid $e-color-dark-gray;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+}

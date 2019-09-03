@@ -1,0 +1,8 @@
+$minScreen: 300px;
+$maxScreen: 1600px;
+$minFont: 12px;
+$maxFont: 18px;
+
+html {
+  @include responsive-font-size($minScreen, $maxScreen, $minFont, $maxFont);
+}

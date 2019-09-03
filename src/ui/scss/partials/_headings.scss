@@ -1,0 +1,15 @@
+.e-title {
+  @include line-size($title-font-size);
+  @include font-weight-bold();
+  color: $e-color-black;
+}
+
+.e-title--dark-background {
+  color: $e-color-white;
+}
+
+.e-subtitle {
+  @include line-size($subtitle-font-size);
+  @include font-weight-medium();
+  color: $e-color-black;
+}

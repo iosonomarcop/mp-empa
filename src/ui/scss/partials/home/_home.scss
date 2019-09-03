@@ -1,0 +1,43 @@
+.e-home {
+  background-color: white;
+  display: table;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.e-home__banner {
+  display: table-row;
+  height: 35%;
+  background-image: url('/ui/assets/images/homepage_hero-lg-xhdpi.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.e-home__details {
+  display: table;
+  height: 100%;
+}
+
+.e-home__footer {
+  display: table-row;
+  vertical-align: bottom;
+  height: 0;
+}
+
+@media (min-width: $screen-size-small) and (max-width: $screen-size-medium) {
+  .e-home__banner {
+    background-image: url('/ui/assets/images/homepage_hero-lg-hdpi.jpg');
+  }
+}
+
+@media only screen and (max-width: $screen-size-small) {
+  .e-home__banner {
+    height: 33%;
+    background-image: url('/ui/assets/images/homepage_hero-lg-mdpi.jpg');
+  }
+
+  .e-home__content {
+    height: 65%;
+  }
+}

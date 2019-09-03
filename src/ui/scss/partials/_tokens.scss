@@ -1,0 +1,59 @@
+// COLOR TOKENS
+
+$e-color-white: #FFF;
+$e-color-red: #BC204B;
+$e-color-light-red: #c47088;
+$e-color-black: #333;
+$e-color-light-gray: #EDEFF0;
+$e-color-dark-gray: #707070;
+$e-color-transparent: rgba(255, 255, 255, 0);
+
+$e-color-primary: $e-color-red;
+$e-color-primary-light: $e-color-light-red;
+$e-color-border-default: $e-color-light-gray;
+$e-color-background-alternative: #fafafa;
+$e-color-border-alternative: #f4efef;
+$e-color-button-default: #bab5b5;
+$e-color-button-default-over: #e6dfdf;
+$e-color-text-indicator-ok: #4CAF50;
+$e-color-text-indicator-warning: #afa24c;
+$e-color-text-indicator-info: #4c82af;
+$e-color-text-indicator-undefined: #707070;
+$e-color-text-indicator-error: #8a0000;
+$e-color-text-disabled: #EDEFF0;
+
+// SPACING TOKENS
+
+$spacing-unit-xl: 5rem;
+$spacing-unit-l: 2.5rem;
+$spacing-unit-m: 1.25rem;
+$spacing-unit-s: .625rem;
+$spacing-unit-xs: .3125rem;
+$spacing-unit-xxs: .15625rem;
+
+// OPACITY
+
+$opacity-transparent: 0;
+$opacity-xxs: .08;
+$opacity-xs: .1;
+$opacity-s: .25;
+$opacity-m: .5;
+$opacity-l: .75;
+$opacity-xl: .85;
+$opacity-solid: 1;
+
+
+// SHADOWS
+$box-shadow-natural: 0 16px 36px rgba($e-color-black, $opacity-xxs), 0 4px 8px rgba($e-color-black, $opacity-xs);
+
+// BORDERS
+$border-width-thin: 1px;
+$border-width-thick: 2 * $border-width-thin;
+
+// SCREEN SIZE
+$screen-size-big: 1024px;
+$screen-size-medium: 768px;
+$screen-size-small: 480px;
+
+// Z ORDER
+$z-modal: 9000;

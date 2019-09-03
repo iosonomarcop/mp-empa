@@ -1,0 +1,20 @@
+.e-banner-content {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+}
+
+.e-banner-content__item {
+  display: block;
+}
+
+@media only screen and (max-width: $screen-size-small) {
+  .e-banner-content {
+    text-align: center;
+    margin: auto;
+  }
+
+  .e-banner-content__item {
+    margin: auto;
+  }
+}

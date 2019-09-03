@@ -1,0 +1,18 @@
+<div class="e-modal-window" [ngClass]="{'e-modal-window--visible': isOpen}">
+  <div class="e-modal  e-modal--small">
+    <div class="e-modal__content">
+      <h1 class="e-subtitle">
+        Cancel Order
+      </h1>
+      <p class="e-label  e-spacing-top-m">You're about to cancel the order. Once you do it, it cannot be restored.</p>
+    </div>
+    <div class="e-modal__footer">
+      <div class="e-footer-item">
+        <button class="e-button  e-button--compact  e-button--primary" (click)="cancelOrder()">Cancel order</button>
+      </div>
+      <div class="e-footer-item">
+        <button class="e-button  e-button--compact  e-button--default" (click)="back()">back</button>
+      </div>
+    </div>
+  </div>
+</div>

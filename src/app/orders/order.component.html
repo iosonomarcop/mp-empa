@@ -1,0 +1,41 @@
+<div class="e-order">
+  <div class="e-order-block">
+    <div class="e-order__description">
+      <div class="e-label  e-label--field-title">{{order.ref}}</div>
+      <div class="e-label  e-label--field  e-label--inline">
+        {{getFirstItemName()}}
+      </div>
+      <div *ngIf="getItemsCount() > 1" class="e-label  e-label--inline  e-label--reduced">
+        (+{{getItemsCount() - 1}} others)
+      </div>
+    </div>
+    <ng-container *ngIf="order.status === orderStatusEnum.CANCELLED">
+      <div class="e-order__primary-info">
+        <div class="e-label  e-label--field-title">Status</div>
+        <div class="e-label  e-label--{{getPaymentStatusClass()}}">{{getPaymentStatusLabel()}}</div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="order.status !== orderStatusEnum.CANCELLED">
+      <div class="e-order__primary-info">
+        <div class="e-label  e-label--field-title">Delivery</div>
+        <div class="e-label  e-label--{{getOrderStatusClass()}}">{{getOrderStatusLabel()}}</div>
+      </div>
+      <div class="e-order__secondary-info">
+        <div class="e-label  e-label--field-title">Status</div>
+        <div class="e-label  e-label--{{getPaymentStatusClass()}}">{{getPaymentStatusLabel()}}</div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="e-order-block">
+    <div class="e-order__price">
+      <div class="e-label  e-label--field-title">price</div>
+      <div class="e-label  e-label--field  e-label--number  e-label--inline">{{orderTotalAfterDiscount}}€</div>
+      <div class="e-label  e-label--field  e-label--number  e-label--inline">
+        ( <span class="e-label  e-label--strike">{{orderTotal}}€</span> )
+      </div>
+    </div>
+    <div class="e-order__details">
+      <button class="e-button  e-button--compact  e-button--default" (click)="showOrderDetails()">Details</button>
+    </div>
+  </div>
+</div>

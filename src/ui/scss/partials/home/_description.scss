@@ -1,0 +1,30 @@
+$description-image-width: 90%;
+
+.e-description {
+  width: 100%;
+  height: 100%;
+}
+
+.e-description__entry {
+  display: block;
+  margin-bottom: $spacing-unit-m;
+}
+
+.e-description__image {
+  max-width: $description-image-width;
+}
+
+@media only screen and (max-width: $screen-size-small) {
+  .e-description {
+    text-align: center;
+  }
+
+  .e-description__entry {
+    margin-bottom: $spacing-unit-s;
+  }
+
+  .e-description__image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

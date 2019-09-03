@@ -1,0 +1,20 @@
+.e-link {
+  color: $e-color-primary;
+  text-decoration: none;
+  border-radius: $_button-border-radius;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.e-link--ghost {
+  color: $e-color-dark-gray;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}

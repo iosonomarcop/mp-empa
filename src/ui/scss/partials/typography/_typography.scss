@@ -1,0 +1,30 @@
+@mixin truncate() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin font-weight-regular() {
+  font-family: $typeface-regular;
+  font-weight: normal;
+}
+
+@mixin font-weight-medium() {
+  font-family: $typeface-medium;
+  font-weight: normal;
+}
+
+@mixin font-weight-italic() {
+  font-family: $typeface-medium;
+  font-weight: normal;
+}
+
+@mixin font-weight-bold() {
+  font-family: $typeface-bold;
+  font-weight: normal;
+}
+
+@mixin line-size($fontSize) {
+  font-size: $fontSize;
+  line-height: $line-height-ratio;
+}

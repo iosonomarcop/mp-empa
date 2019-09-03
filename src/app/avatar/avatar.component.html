@@ -1,0 +1,13 @@
+<div (click)="toggleMenu()" class="e-avatar" [attr.data-letters]="initials">
+  <span class="e-avatar__name">{{name}}</span>
+  <div class="e-avatar__menu" [ngClass]="{'is-open': isMenuOpen}">
+    <a class="e-link  e-link--ghost" (click)="logout()">
+      <div class="e-menu-image">
+        <img alt="logout" src="/ui/assets/images/logout.png"/>
+      </div>
+      <div class="e-menu-text">
+        logout
+      </div>
+    </a>
+  </div>
+</div>
